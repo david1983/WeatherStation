@@ -1,0 +1,17 @@
+{
+  "name": "tempserver",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "serialport": "~1.7.4",
+    "socket.io": "~1.3.6",
+    "express": "~4.13.3",
+    "moment": "~2.10.6"
+  }
+}
