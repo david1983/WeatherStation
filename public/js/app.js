@@ -66,11 +66,15 @@ app.controller('mainCtrl',function($scope, socket, $interval,$timeout, $http){
         })
     }
 
-    $interval($scope.initGraph,60000 * $scope.interval);
-
+    $scope.refreshInterval = $interval($scope.initGraph,60000 * $scope.interval);
 
     $scope.$watch('interval',function(newval,oldval){
+
         $scope.initGraph()
+        if(newval>0){
+            $interval.cancel($scope.refreshInterval);
+            $scope.refreshInterval = $interval($scope.initGraph,60000 * $scope.interval);
+        }
     });
 
     $scope.options = {

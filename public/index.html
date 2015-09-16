@@ -23,7 +23,7 @@
     </div>
     <div class="bottom_bar">
         <input  type="button" value="REFRESH" ng-click="requestData()" >
-        | Interval: <input type="number" step="1" ng-model="interval" style="width:25px">
+        | Interval: <input type="number" min="0.1" step="0.1" ng-model="interval" style="width:45px">
     </div>
     <div class="container" ng-app="example" ng-controller="ExampleCtrl">
         <linechart data="data" options="options"></linechart>
